@@ -1,12 +1,10 @@
-# Personalized Compliment Generator
+# Playlist recommender
 
-A quirky web app that generates personalized compliments based on user input (name, hobby, etc.).
-Made by Thoembs05
+A simple playlist-recommender that gives the user a playlists based on their current mood.
+Made by Thoembs05.
 
 ## Features
-- Randomly generate fun compliments using your name and hobby
-- Share compliments on Twitter
-- Save your favorite compliments
+- User chooses mood and gets 1 out of 3 playlists
 
 ## Getting Started
 
