@@ -1,0 +1,131 @@
+:root {
+  --primary-bg: #fff;
+  --primary-text: #222;
+  --card-bg: #f0f4ff;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --button-bg: #646cff;
+  --button-text: #fff;
+  --button-bg-hover: #494fcf;
+  --favorite-bg: #f9f9f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #181a20;
+    --primary-text: #f3f3f3;
+    --card-bg: #23263a;
+    --input-bg: #23263a;
+    --input-border: #444;
+    --button-bg: #646cff;
+    --button-text: #fff;
+    --button-bg-hover: #494fcf;
+    --favorite-bg: #23263a;
+  }
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  min-height: 100vh;
+}
+
+.mood-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem 1rem;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  transition: background 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.mood-picker {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mood-btn {
+  background: rgba(255,255,255,0.7);
+  border: 2px solid var(--input-border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color: var(--primary-text);
+  transition: border 0.2s, background 0.2s, transform 0.2s;
+}
+.mood-btn.selected, .mood-btn:hover {
+  border: 2px solid var(--button-bg);
+  background: var(--card-bg);
+  transform: scale(1.07);
+}
+.mood-label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--primary-text);
+}
+.playlist-recommendation {
+  margin-top: 2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: var(--primary-text);
+}
+.open-spotify {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #1db954;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.open-spotify:hover {
+  background: #159c3f;
+}
+.go-back-btn {
+  background: var(--input-bg) !important;
+  color: var(--primary-text) !important;
+  border: 2px solid var(--input-border) !important;
+  box-shadow: none !important;
+}
+.go-back-btn:hover {
+  background: var(--card-bg) !important;
+  color: var(--primary-text) !important;
+}
+@media (prefers-color-scheme: dark) {
+  .mood-btn {
+    background: rgba(24,26,32,0.7);
+    border: 2px solid var(--input-border);
+    color: var(--primary-text);
+  }
+  .mood-btn.selected, .mood-btn:hover {
+    background: var(--card-bg);
+    border: 2px solid var(--button-bg);
+  }
+  .mood-label {
+    color: var(--primary-text);
+  }
+  .playlist-recommendation {
+    background: var(--card-bg);
+    color: var(--primary-text);
+  }
+}
