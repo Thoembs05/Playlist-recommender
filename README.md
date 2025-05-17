@@ -1,6 +1,7 @@
 # Personalized Compliment Generator
 
 A quirky web app that generates personalized compliments based on user input (name, hobby, etc.).
+Made by Thoembs05
 
 ## Features
 - Randomly generate fun compliments using your name and hobby
